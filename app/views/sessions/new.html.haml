@@ -1,0 +1,12 @@
+%h1 Sessions#new
+= link_to "新規作成", new_user_path
+
+%p ログイン：
+= form_for :session, url: sessions_path do |f|
+  = f.label :name
+  = f.text_field :name
+  %br
+  = f.label :password
+  = f.password_field :password
+  %br
+  = f.submit

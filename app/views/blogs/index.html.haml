@@ -1,0 +1,9 @@
+%h1 Blogs#index
+
+= link_to 'ブロクを書く', new_blog_entry_path(@blog)
+%ul
+-if @entries.blank?
+  %li まだエントリーされたブログがありません
+- @entries.each do |entry|
+  %li= entry.title
+  %li= entry.body

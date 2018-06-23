@@ -1,0 +1,7 @@
+%h1 Entries#new
+= form_for @entry, url: blog_entries_path do |f|
+  = f.label :title
+  = f.text_field :title
+  = f.label :body
+  = f.text_field :body
+  = f.submit
