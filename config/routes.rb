@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :users, except: :index, shallow: true do
     resources :blogs do
       resources :entries do
